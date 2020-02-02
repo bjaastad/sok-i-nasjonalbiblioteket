@@ -30,11 +30,11 @@ searchNbNo = function(onClickData, tab) {
 
     // Utfør søk
     if (ctrlHoldtNede) {
-        // Utfør søk i ny fane
-        browser.tabs.create({url: "https://www.nb.no/search?q=" + hermeteiknkarakter + markertTekst + hermeteiknkarakter});
-    } else {
         // Utfør søk i eksisterende fane
         browser.tabs.update({url: "https://www.nb.no/search?q=" + hermeteiknkarakter + markertTekst + hermeteiknkarakter});    
+    } else {
+        // Utfør søk i ny fane
+        browser.tabs.create({url: "https://www.nb.no/search?q=" + hermeteiknkarakter + markertTekst + hermeteiknkarakter});
     }
 };
 
